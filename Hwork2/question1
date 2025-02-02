@@ -1,0 +1,35 @@
+,, Questions:
+,, 3.1: (NOT (EQUAL 3 (ABS -3))) => NIL
+,, 3.2: (/ (+ 8 12) 2) 
+,, 3.3: (+ (* 3 3) (* 4 4))
+,, (defun MILES-PER-GALLON (INITIAL-ODOMETER-READING FINAL-ODOMETER-READING GALLONS-CONSUMED)
+,,  (/ (- FINAL-ODOMETER-READING INITIAL-ODOMETER-READING) GALLONS-CONSUMED))
+,, 3.10: (third (the quick brown fox)) is supposed to be: (third '(the quick brown fox))
+,,       (list 2 and 2 is 4) is supposed to be: (list 2 'and 2 'is 4)
+,,       (+ 1 ’(length (list t t t t))) is supposed to be: (+ 1 (length (list t t t t)))
+,,       (cons ’patrick (seymour marvin)) is supposed to be: (cons 'patrick '(seymour marvin))
+,,       (cons ’patrick (list seymour marvin)) is supposed to be: (cons 'patrick (list 'seymour 'marvin))
+
+,, 3.20: (mystery '(dancing bear)) => (bear dancing)
+,,       (mystery 'dancing 'bear) => Error!
+,,       (mystery '(zowie)) => (nil zowie)
+,,       (mystery (list 'first 'second)) => (second first)
+
+,, 3.21: (defun speak (x y) (list ’all ’x ’is ’y)) the issue is: 'x and 'y in the list is incorrect, we need to remove the quotes
+,,       (defun speak (x) (y) (list ’all x ’is y)) the issue is: (y) is is incorrectly placed as a separate parameter list. Parameters should be in one list, not multiple.
+,,       (defun speak ((x) (y)) (list all ’x is ’y)) the issue is: (x) & (y) are invalid as parameter lists. Parameters must be simple symbols, not lists. all and is should be quoted and the parentheses around the body are incorrect
+
+
+
+,, 3.25: (list ’cons t nil) EVALUATE TO (CONS T NIL)
+,,       (eval (list ’cons t nil)) EVALUATE TO (T)
+,,       (eval (eval (list ’cons t nil))) EVALUATE TO T
+,,       (apply #’cons ’(t nil)) EVALUATE TO (T)
+,,       (eval nil) EVALUATE TO NIL
+,,       (list ’eval nil) EVALUATE TO (EVAL NIL)
+,,       (eval (list ’eval nil)) EVALUATE TO NIL
+
+
+
+
+
