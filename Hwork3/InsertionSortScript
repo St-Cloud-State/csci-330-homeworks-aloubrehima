@@ -1,0 +1,136 @@
+Script started on 2025-02-18 02:27:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="73" LINES="24"]
+[0;32m@aloubrehima [0m➜ [1;34m/workspaces/csci-330-homeworks-aloubrehima/Hwork3 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "insertion_sort.lisp")
+
+T
+* (insertion-sort '(10 3 5 8 4 9 1 6 2 7))       22 98))
+
+(1 3 4 5 8 9 10 22 98)
+* (insertion-sort '(1 2 3 4 5))           6 7 8 9 10)
+(insertion-sort '(1 2 3 4 5))                             )
+
+(6 7 8 9 10)
+* (insertion-sort '(5 4 3 2 1))           10 9 8 7 6))
+
+(6 7 8 9 10)
+* (insertion-sort '(4 2 7 2 5 9 1 4 6 8))
+
+(1 2 2 4 4 5 6 7 8 9)
+* (insertion-sort '(42))    34))
+
+(34)
+* exit
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable EXIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Exit debugger, returning to top level.
+
+(SB-INT:SIMPLE-EVAL-IN-LEXENV EXIT #<NULL-LEXENV>)
+0] quit
+; in:
+;     (PROGN QUIT)
+; 
+; caught WARNING:
+;   undefined variable: QUIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     QUIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable QUIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 1).
+  1:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G389)) #<unused argument>)
+   source: (PROGN QUIT)
+0[2] S EXIT
+; in:
+;     (PROGN EXIT)
+; 
+; caught WARNING:
+;   undefined variable: EXIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     EXIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable EXIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 2).
+  1:         Reduce debugger level (to debug level 1).
+  2:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G390)) #<unused argument>)
+   source: (PROGN EXIT)
+0[3] STOP
+
+Not currently single-stepping. (Use START to activate the single-stepper)
+
+0[3] QUIT
+; in:
+;     (PROGN QUIT)
+; 
+; caught WARNING:
+;   undefined variable: QUIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     QUIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable QUIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 3).
+  1:         Reduce debugger level (to debug level 2).
+  2:         Reduce debugger level (to debug level 1).
+  3:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G391)) #<unused argument>)
+   source: (PROGN QUIT)
+0[4] QUOT  IT
+; in:
+;     (PROGN QUIT)
+; 
+; caught WARNING:
+;   undefined variable: QUIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     QUIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable QUIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
