@@ -10,7 +10,7 @@ int partition(vector<int>& arr, int low, int high) { // Partition function for q
     for (int j = low; j < high; j++) { // Traverse through all elements
         if (arr[j] < pivot) {  // If current element is smaller than the pivot
             i++;
-            swap(arr[i], arr[j]);
+            swap(arr[i], arr[j]); 
         }
     }
     swap(arr[i + 1], arr[high]);

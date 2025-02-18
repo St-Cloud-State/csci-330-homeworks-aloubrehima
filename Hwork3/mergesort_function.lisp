@@ -6,7 +6,7 @@
                    (t (split (cddr lst) (cons (car lst) left) (cons (cadr lst) right)))))) ; Recursively split, alternating elements
     (split lst '() '()))) ; Initial call with empty left and right lists
 
-(defun my-merge (lst1 lst2)
+(defun my-merge (lst1 lst2) 
   "Merges two sorted lists into one sorted list."
   (cond ((null lst1) lst2) ; If lst1 is empty, return lst2
         ((null lst2) lst1) ; If lst1 is empty, return lst1

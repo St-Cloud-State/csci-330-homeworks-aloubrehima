@@ -48,7 +48,7 @@ restarts (invokable by number or by possibly-abbreviated name):
 ; compilation unit finished
 ;   Undefined variable:
 ;     QUIT
-;   caught 1 WARNING condition
+;   caught 1 WARNING condition 
 
 debugger invoked on a UNBOUND-VARIABLE in thread
 #<THREAD "main thread" RUNNING {9461061}>:
@@ -133,4 +133,4 @@ debugger invoked on a UNBOUND-VARIABLE in thread
 #<THREAD "main thread" RUNNING {9461061}>:
   The variable QUIT is unbound.
 
-Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.

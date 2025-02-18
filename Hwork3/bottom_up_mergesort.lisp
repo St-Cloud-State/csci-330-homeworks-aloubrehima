@@ -27,3 +27,4 @@
         (loop while (> (length sorted) 1) do
           (setf sorted (merge-pairs sorted)))
         (car sorted))))
+
