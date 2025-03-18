@@ -17,7 +17,7 @@
         (progn
           (setf *error-msg* (format nil "Unexpected symbol '~a' at position ~d, expected '~a'" 
                                     (or current "EOF") *pos* expected))
-          nil))))
+          nil)))) 
 
 ;;; Parser Functions for Non-Terminals
 (defun parse-G ()
