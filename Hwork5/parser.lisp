@@ -121,4 +121,4 @@
     (test-parse str)))
 
 ;;; Run the tests when the file is loaded
-(run-tests)
+(run-tests) 
