@@ -1,0 +1,2336 @@
+Script started on 2025-03-18 03:50:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="73" LINES="16"]
+[0;32m@aloubrehima [0m➜ [1;34m/workspaces/csci-330-homeworks-aloubrehima/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (load "parser.lisp")
+=== Testing Valid Strings ===
+Parsing E at position 1
+Parsing 'ixoys': T
+Parsing E at position 1
+Parsing 'ixdssb': T
+Parsing E at position 1
+Error for 'izowsss': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'izowsss': NIL
+Parsing E at position 1
+Error for 'iwdssbes': Unexpected symbol 'b' at position 5, expected 's'
+Parsing 'iwdssbes': NIL
+Parsing E at position 1
+Error for 'iyoydssbes': Unexpected symbol 'b' at position 7, expected 's'
+Parsing 'iyoydssbes': NIL
+Parsing E at position 1
+Error for 'ixoyowdsssbes': Unexpected symbol 'b' at position 10, expected 's'
+Parsing 'ixoyowdsssbes': NIL
+Parsing E at position 1
+Error for 'ixoysdsssdsssdssb': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'ixoysdsssdsssdssb': NIL
+
+=== Testing Invalid Strings ===
+Parsing E at position 1
+Error for 'ixoy': Unexpected symbol 'EOF' at position 4, expected 'd'
+Parsing 'ixoy': NIL
+Parsing E at position 1
+Parsing 'ixdsb': T
+Parsing E at position 1
+Error for 'izowssb': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'izowssb': NIL
+Parsing E at position 1
+Error for 'iwdssbex': Unexpected symbol 'b' at position 5, expected 's'
+Parsing 'iwdssbex': NIL
+Parsing E at position 1
+Error for 'iyoydssbex': Unexpected symbol 'b' at position 7, expected 's'
+Parsing 'iyoydssbex': NIL
+Parsing E at position 1
+Error for 'ixoyowdssbexs': Unexpected symbol 'b' at position 9, expected 's'
+Parsing 'ixoyowdssbexs': NIL
+Parsing E at position 1
+Error for 'ixoysdsssdsssdsss': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'ixoysdsssdsssdsss': NIL
+T
+* (run-tests)
+=== Testing Valid Strings ===
+Parsing E at position 1
+Parsing 'ixoys': T
+Parsing E at position 1
+Parsing 'ixdssb': T
+Parsing E at position 1
+Error for 'izowsss': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'izowsss': NIL
+Parsing E at position 1
+Error for 'iwdssbes': Unexpected symbol 'b' at position 5, expected 's'
+Parsing 'iwdssbes': NIL
+Parsing E at position 1
+Error for 'iyoydssbes': Unexpected symbol 'b' at position 7, expected 's'
+Parsing 'iyoydssbes': NIL
+Parsing E at position 1
+Error for 'ixoyowdsssbes': Unexpected symbol 'b' at position 10, expected 's'
+Parsing 'ixoyowdsssbes': NIL
+Parsing E at position 1
+Error for 'ixoysdsssdsssdssb': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'ixoysdsssdsssdssb': NIL
+
+=== Testing Invalid Strings ===
+Parsing E at position 1
+Error for 'ixoy': Unexpected symbol 'EOF' at position 4, expected 'd'
+Parsing 'ixoy': NIL
+Parsing E at position 1
+Parsing 'ixdsb': T
+Parsing E at position 1
+Error for 'izowssb': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'izowssb': NIL
+Parsing E at position 1
+Error for 'iwdssbex': Unexpected symbol 'b' at position 5, expected 's'
+Parsing 'iwdssbex': NIL
+Parsing E at position 1
+Error for 'iyoydssbex': Unexpected symbol 'b' at position 7, expected 's'
+Parsing 'iyoydssbex': NIL
+Parsing E at position 1
+Error for 'ixoyowdssbexs': Unexpected symbol 'b' at position 9, expected 's'
+Parsing 'ixoyowdssbexs': NIL
+Parsing E at position 1
+Error for 'ixoysdsssdsssdsss': Unexpected symbol 's' at position 4, expected 'o'
+Parsing 'ixoysdsssdsssdsss': NIL
+NIL
+* quit
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable QUIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Exit debugger, returning to top level.
+
+(SB-INT:SIMPLE-EVAL-IN-LEXENV QUIT #<NULL-LEXENV>)
+0] exit
+; in:
+;     (PROGN EXIT)
+; 
+; caught WARNING:
+;   undefined variable: EXIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     EXIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable EXIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 1).
+  1:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G389)) #<unused argument>)
+   source: (PROGN EXIT)
+0[2] exit
+; in:
+;     (PROGN EXIT)
+; 
+; caught WARNING:
+;   undefined variable: EXIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     EXIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable EXIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 2).
+  1:         Reduce debugger level (to debug level 1).
+  2:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G390)) #<unused argument>)
+   source: (PROGN EXIT)
+0[3] exit
+; in:
+;     (PROGN EXIT)
+; 
+; caught WARNING:
+;   undefined variable: EXIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     EXIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable EXIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 3).
+  1:         Reduce debugger level (to debug level 2).
+  2:         Reduce debugger level (to debug level 1).
+  3:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G391)) #<unused argument>)
+   source: (PROGN EXIT)
+0[4] quit
+; in:
+;     (PROGN QUIT)
+; 
+; caught WARNING:
+;   undefined variable: QUIT
+; 
+; compilation unit finished
+;   Undefined variable:
+;     QUIT
+;   caught 1 WARNING condition
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable QUIT is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Reduce debugger level (to debug level 4).
+  1:         Reduce debugger level (to debug level 3).
+  2:         Reduce debugger level (to debug level 2).
+  3:         Reduce debugger level (to debug level 1).
+  4:         Exit debugger, returning to top level.
+
+((LAMBDA (#:G392)) #<unused argument>)
+   source: (PROGN QUIT)
+0[5] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 5).
+  2:            Reduce debugger level (to debug level 4).
+  3:            Reduce debugger level (to debug level 3).
+  4:            Reduce debugger level (to debug level 2).
+  5:            Reduce debugger level (to debug level 1).
+  6:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[6] ^CHelp! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {9461061}>
+0: ("bogus stack frame")
+1: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+2: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+3: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+4: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+5: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+6: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+7: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+8: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+9: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+10: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+11: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AB629}>)
+12: (SB-DEBUG::DEBUG-LOOP-FUN)
+13: (INTERNAL-DEBUG)
+14: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+15: (SB-DEBUG::%INVOKE-DEBUGGER #<UNBOUND-VARIABLE QUIT {AAE2DC9}>)
+16: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+17: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AAE2E4D}>)
+18: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AAE5D}>)
+19: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNBOUND-VARIABLE QUIT {AAE2DC9}>)
+20: (INVOKE-DEBUGGER #<UNBOUND-VARIABLE QUIT {AAE2DC9}>)
+21: (ERROR UNBOUND-VARIABLE :NAME QUIT)
+22: ("UNBOUND-SYMBOL-ERROR" QUIT)
+23: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #XF75AB14C) #<unused argument>)
+24: ("foreign function: call_into_lisp")
+25: ("foreign function: funcall2")
+26: ("foreign function: interrupt_internal_error")
+27: ("foreign function: handle_trap")
+28: ("foreign function: #x805DE49")
+29: ((LAMBDA (#:G392)) #<unused argument>)
+30: (INTERACTIVE-EVAL QUIT :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+31: (SB-DEBUG::DEBUG-EVAL-PRINT QUIT)
+32: (SB-DEBUG::DEBUG-LOOP-FUN)
+33: (INTERNAL-DEBUG)
+34: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+35: (SB-DEBUG::%INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AAD0979}>)
+36: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+37: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AAD09FD}>)
+38: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AB7DD}>)
+39: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNBOUND-VARIABLE EXIT {AAD0979}>)
+40: (INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AAD0979}>)
+41: (ERROR UNBOUND-VARIABLE :NAME EXIT)
+42: ("UNBOUND-SYMBOL-ERROR" EXIT)
+43: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #XF75ABACC) #<unused argument>)
+44: ("foreign function: call_into_lisp")
+45: ("foreign function: funcall2")
+46: ("foreign function: interrupt_internal_error")
+47: ("foreign function: handle_trap")
+48: ("foreign function: #x805DE49")
+49: ((LAMBDA (#:G391)) #<unused argument>)
+50: (INTERACTIVE-EVAL EXIT :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+51: (SB-DEBUG::DEBUG-EVAL-PRINT EXIT)
+52: (SB-DEBUG::DEBUG-LOOP-FUN)
+53: (INTERNAL-DEBUG)
+54: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+55: (SB-DEBUG::%INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AABED99}>)
+56: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+57: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AABEE1D}>)
+58: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AC15D}>)
+59: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNBOUND-VARIABLE EXIT {AABED99}>)
+60: (INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AABED99}>)
+61: (ERROR UNBOUND-VARIABLE :NAME EXIT)
+62: ("UNBOUND-SYMBOL-ERROR" EXIT)
+63: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #XF75AC44C) #<unused argument>)
+64: ("foreign function: call_into_lisp")
+65: ("foreign function: funcall2")
+66: ("foreign function: interrupt_internal_error")
+67: ("foreign function: handle_trap")
+68: ("foreign function: #x805DE49")
+69: ((LAMBDA (#:G390)) #<unused argument>)
+70: (INTERACTIVE-EVAL EXIT :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+71: (SB-DEBUG::DEBUG-EVAL-PRINT EXIT)
+72: (SB-DEBUG::DEBUG-LOOP-FUN)
+73: (INTERNAL-DEBUG)
+74: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+75: (SB-DEBUG::%INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AAAD631}>)
+76: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+77: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AAAD6B5}>)
+78: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75ACADD}>)
+79: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNBOUND-VARIABLE EXIT {AAAD631}>)
+80: (INVOKE-DEBUGGER #<UNBOUND-VARIABLE EXIT {AAAD631}>)
+81: (ERROR UNBOUND-VARIABLE :NAME EXIT)
+82: ("UNBOUND-SYMBOL-ERROR" EXIT)
+83: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #XF75ACDCC) #<unused argument>)
+84: ("foreign function: call_into_lisp")
+85: ("foreign function: funcall2")
+86: ("foreign function: interrupt_internal_error")
+87: ("foreign function: handle_trap")
+88: ("foreign function: #x805DE49")
+89: ((LAMBDA (#:G389)) #<unused argument>)
+90: (INTERACTIVE-EVAL EXIT :EVAL #<FUNCTION SB-DEBUG::DEBUG-EVAL>)
+91: (SB-DEBUG::DEBUG-EVAL-PRINT EXIT)
+92: (SB-DEBUG::DEBUG-LOOP-FUN)
+93: (INTERNAL-DEBUG)
+94: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+95: (SB-DEBUG::%INVOKE-DEBUGGER #<UNBOUND-VARIABLE QUIT {AA9BAD1}>)
+96: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+97: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AA9BB55}>)
+98: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AD45D}>)
+99: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<UNBOUND-VARIABLE QUIT {AA9BAD1}>)
+100: (INVOKE-DEBUGGER #<UNBOUND-VARIABLE QUIT {AA9BAD1}>)
+101: (ERROR UNBOUND-VARIABLE :NAME QUIT)
+102: ("UNBOUND-SYMBOL-ERROR" QUIT)
+103: (SB-KERNEL:INTERNAL-ERROR #.(SB-SYS:INT-SAP #XF75AD74C) #<unused argument>)
+104: ("foreign function: call_into_lisp")
+105: ("foreign function: funcall2")
+106: ("foreign function: interrupt_internal_error")
+107: ("foreign function: handle_trap")
+108: ("foreign function: #x805DE49")
+109: (SB-INT:SIMPLE-EVAL-IN-LEXENV QUIT #<NULL-LEXENV>)
+110: (EVAL QUIT)
+111: (INTERACTIVE-EVAL QUIT :EVAL NIL)
+112: (SB-IMPL::REPL-FUN NIL)
+113: ((LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL))
+114: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL) {9F75CED}>)
+115: (SB-IMPL::TOPLEVEL-REPL NIL)
+116: (SB-IMPL::TOPLEVEL-INIT)
+117: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+118: ((FLET "WITHOUT-INTERRUPTS-BODY-27" :IN SAVE-LISP-AND-DIE))
+119: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {9461061}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT   ] Reduce debugger level (to debug level 6).
+  1: [CONTINUE] Return from SB-UNIX:SIGINT.
+  2:            Reduce debugger level (to debug level 5).
+  3:            Reduce debugger level (to debug level 4).
+  4:            Reduce debugger level (to debug level 3).
+  5:            Reduce debugger level (to debug level 2).
+  6:            Reduce debugger level (to debug level 1).
+  7:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[7] ^CHelp! ERROR-ERROR is 2 levels deep. Will try to reset the IO streams by calling STREAM-COLD-INIT-OR-RESET.
+^CHelp! ERROR-ERROR is 3 levels deep. Will try to THROW this thread to the toplevel.
+
+* ^C
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Exit debugger, returning to top level.
+
+("bogus stack frame")
+0] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 1).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[2] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 2).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 1).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[3] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 3).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 2).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 1).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[4] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 4).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 3).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 2).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 1).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[5] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 5).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 4).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 3).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 2).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 1).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[6] ^C
+
+^C
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #x95489F3.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1:            Return from SB-UNIX:SIGINT.
+  2: [ABORT   ] Reduce debugger level (to debug level 6).
+  3:            Return from SB-UNIX:SIGINT.
+  4:            Reduce debugger level (to debug level 5).
+  5:            Return from SB-UNIX:SIGINT.
+  6:            Reduce debugger level (to debug level 4).
+  7:            Return from SB-UNIX:SIGINT.
+  8:            Reduce debugger level (to debug level 3).
+  9:            Return from SB-UNIX:SIGINT.
+ 10:            Reduce debugger level (to debug level 2).
+ 11:            Return from SB-UNIX:SIGINT.
+ 12:            Reduce debugger level (to debug level 1).
+ 13:            Return from SB-UNIX:SIGINT.
+ 14:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[7] ^C^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 7).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Return from SB-UNIX:SIGINT.
+  4:            Reduce debugger level (to debug level 6).
+  5:            Return from SB-UNIX:SIGINT.
+  6:            Reduce debugger level (to debug level 5).
+  7:            Return from SB-UNIX:SIGINT.
+  8:            Reduce debugger level (to debug level 4).
+  9:            Return from SB-UNIX:SIGINT.
+ 10:            Reduce debugger level (to debug level 3).
+ 11:            Return from SB-UNIX:SIGINT.
+ 12:            Reduce debugger level (to debug level 2).
+ 13:            Return from SB-UNIX:SIGINT.
+ 14:            Reduce debugger level (to debug level 1).
+ 15:            Return from SB-UNIX:SIGINT.
+ 16:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[8] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+^C  0: [CONTINUE
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #x1000424.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1:            Return from SB-UNIX:SIGINT.
+  2: [ABORT   ] Reduce debugger level (to debug level 8).
+  3:            Return from SB-UNIX:SIGINT.
+  4:            Reduce debugger level (to debug level 7).
+  5:            Return from SB-UNIX:SIGINT.
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 6).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 5).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 4).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 3).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Reduce debugger level (to debug level 2).
+ 16:            Return from SB-UNIX:SIGINT.
+ 17:            Reduce debugger level (to debug level 1).
+ 18:            Return from SB-UNIX:SIGINT.
+ 19:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[9] ^CHelp! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {9461061}>
+0: ("bogus stack frame")
+1: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+2: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+3: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+4: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+5: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+6: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+7: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+8: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+9: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+10: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+11: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A6EE9}>)
+12: (SB-DEBUG::DEBUG-LOOP-FUN)
+13: (INTERNAL-DEBUG)
+14: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+15: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+16: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+17: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB9757D}>)
+18: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A629D}>)
+19: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+20: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+21: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+22: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A63AD}>)
+23: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+24: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+25: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A670C))
+26: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+27: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+28: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+29: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A64E5}>)
+30: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A668C) #.(SB-SYS:INT-SAP #XF75A670C))
+31: ("foreign function: call_into_lisp")
+32: ("foreign function: funcall3")
+33: ("foreign function: interrupt_handle_now")
+34: ("foreign function: #x805E0E6")
+35: ("bogus stack frame")
+36: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+37: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+38: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+39: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+40: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+41: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+42: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+43: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+44: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+45: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+46: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A88A9}>)
+47: (SB-DEBUG::DEBUG-LOOP-FUN)
+48: (INTERNAL-DEBUG)
+49: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+50: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+51: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+52: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB8E8DD}>)
+53: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A709D}>)
+54: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+55: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+56: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+57: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A71AD}>)
+58: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+59: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+60: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A750C))
+61: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+62: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+63: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+64: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A72E5}>)
+65: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A748C) #.(SB-SYS:INT-SAP #XF75A750C))
+66: ("foreign function: call_into_lisp")
+67: ("foreign function: funcall3")
+68: ("foreign function: interrupt_handle_now")
+69: ("foreign function: #x805E0E6")
+70: (SUBSEQ #<unavailable argument> #<unavailable argument> #<unavailable argument>) [external]
+71: (SB-FORMAT::PARSE-CONDITIONAL-DIRECTIVE (" in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>))
+72: (SB-FORMAT::[-FORMAT-DIRECTIVE-INTERPRETER #<SB-PRETTY:PRETTY-STREAM {AB8E751}> #<~@[> (" in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (#<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+73: (SB-FORMAT::INTERPRET-DIRECTIVE-LIST #<SB-PRETTY:PRETTY-STREAM {AB8E751}> (#<~@[> " in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (#<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+74: (SB-FORMAT::%FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+75: (FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+76: (FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) [more]
+77: ((FLET "WITH-PRETTY-STREAM0" :IN SB-PRETTY::CALL-LOGICAL-BLOCK-PRINTER) #<SB-PRETTY:PRETTY-STREAM {AB8E751}>)
+78: (SB-PRETTY::CALL-LOGICAL-BLOCK-PRINTER #<CLOSURE (FLET "PPRINT-BLOCK" :IN SB-DEBUG::%PRINT-DEBUGGER-INVOCATION-REASON) {F75A7B4D}> #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL NIL "" NIL)
+79: (SB-DEBUG::%PRINT-DEBUGGER-INVOCATION-REASON #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}> #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}>)
+80: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+81: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+82: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB8E055}>)
+83: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A7C5D}>)
+84: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+85: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+86: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+87: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A7D6D}>)
+88: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+89: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+90: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A80CC))
+91: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+92: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+93: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+94: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A7EA5}>)
+95: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A804C) #.(SB-SYS:INT-SAP #XF75A80CC))
+96: ("foreign function: call_into_lisp")
+97: ("foreign function: funcall3")
+98: ("foreign function: interrupt_handle_now")
+99: ("foreign function: #x805E0E6")
+100: ("bogus stack frame")
+101: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+102: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+103: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+104: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+105: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+106: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+107: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+108: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+109: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+110: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+111: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A96A9}>)
+112: (SB-DEBUG::DEBUG-LOOP-FUN)
+113: (INTERNAL-DEBUG)
+114: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+115: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+116: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+117: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB86505}>)
+118: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A8A5D}>)
+119: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+^C#<SB-SYS:INTERACTIVE-INTERRUPT while printing frame 121. The partial output is: "121: ">
+122: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A8B6D}>)
+123: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+124: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+125: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A8ECC))
+126: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+127: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+128: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+129: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A8CA5}>)
+130: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A8E4C) #.(SB-SYS:INT-SAP #XF75A8ECC))
+131: ("foreign function: call_into_lisp")
+132: ("foreign function: funcall3")
+133: ("foreign function: interrupt_handle_now")
+134: ("foreign function: #x805E0E6")
+135: ("bogus stack frame")
+136: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+137: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+138: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+139: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+140: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+141: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+142: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+143: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+144: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+145: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+146: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AA4A9}>)
+147: (SB-DEBUG::DEBUG-LOOP-FUN)
+148: (INTERNAL-DEBUG)
+149: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+150: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+151: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+152: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB7F78D}>)
+153: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A985D}>)
+154: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+155: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+156: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+157: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A996D}>)
+158: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+159: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+160: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A9CCC))
+161: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+162: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+163: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+164: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A9AA5}>)
+165: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A9C4C) #.(SB-SYS:INT-SAP #XF75A9CCC))
+166: ("foreign function: call_into_lisp")
+167: ("foreign function: funcall3")
+168: ("foreign function: interrupt_handle_now")
+169: ("foreign function: #x805E0E6")
+170: ("bogus stack frame")
+171: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+172: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+173: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+174: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+175: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+176: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+177: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+178: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+179: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+180: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+181: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AB2A9}>)
+182: (SB-DEBUG::DEBUG-LOOP-FUN)
+183: (INTERNAL-DEBUG)
+184: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+185: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+186: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+187: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB796DD}>)
+188: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AA65D}>)
+189: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+190: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+191: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+192: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AA76D}>)
+193: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+194: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+195: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AAACC))
+196: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+197: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+198: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+199: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AA8A5}>)
+200: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AAA4C) #.(SB-SYS:INT-SAP #XF75AAACC))
+201: ("foreign function: call_into_lisp")
+202: ("foreign function: funcall3")
+203: ("foreign function: interrupt_handle_now")
+204: ("foreign function: #x805E0E6")
+205: ("bogus stack frame")
+206: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+207: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+208: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+209: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+210: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+211: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+212: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+213: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+214: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+215: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+216: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AC0A9}>)
+217: (SB-DEBUG::DEBUG-LOOP-FUN)
+218: (INTERNAL-DEBUG)
+219: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+220: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+221: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+222: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB746DD}>)
+223: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AB45D}>)
+224: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+225: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+226: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+227: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AB56D}>)
+228: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+229: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+230: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AB8CC))
+231: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+232: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+233: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+234: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AB6A5}>)
+235: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AB84C) #.(SB-SYS:INT-SAP #XF75AB8CC))
+236: ("foreign function: call_into_lisp")
+237: ("foreign function: funcall3")
+238: ("foreign function: interrupt_handle_now")
+239: ("foreign function: #x805E0E6")
+240: ("bogus stack frame")
+241: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+242: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+243: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+244: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+245: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+246: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+247: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+248: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+249: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+250: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+251: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75ACEA9}>)
+252: (SB-DEBUG::DEBUG-LOOP-FUN)
+253: (INTERNAL-DEBUG)
+254: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+255: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+256: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+257: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB705A5}>)
+258: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AC25D}>)
+259: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+260: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+261: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+262: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AC36D}>)
+263: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+264: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+265: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AC6CC))
+266: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+267: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+268: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+269: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AC4A5}>)
+270: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AC64C) #.(SB-SYS:INT-SAP #XF75AC6CC))
+271: ("foreign function: call_into_lisp")
+272: ("foreign function: funcall3")
+273: ("foreign function: interrupt_handle_now")
+274: ("foreign function: #x805E0E6")
+275: ("bogus stack frame")
+276: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+277: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+278: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+279: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+280: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+281: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+282: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+283: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+284: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+285: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+286: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75ADCA1}>)
+287: (SB-DEBUG::DEBUG-LOOP-FUN)
+288: (INTERNAL-DEBUG)
+289: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+290: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+291: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+292: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB6CE75}>)
+293: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AD05D}>)
+294: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+295: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+296: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+297: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AD16D}>)
+298: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+299: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+300: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AD4CC))
+301: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+302: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+303: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+304: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AD2A5}>)
+305: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AD44C) #.(SB-SYS:INT-SAP #XF75AD4CC))
+306: ("foreign function: call_into_lisp")
+307: ("foreign function: funcall3")
+308: ("foreign function: interrupt_handle_now")
+309: ("foreign function: #x805E0E6")
+310: ("bogus stack frame")
+311: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL T)
+312: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "standard input" {A8511E9}>)
+313: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0)
+314: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0)
+315: (READ-CHAR #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0 #<unused argument>)
+316: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL 0 #<unused argument>)
+317: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) T)
+318: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) NIL)
+319: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) NIL)
+320: (SB-IMPL::REPL-READ-FORM-FUN #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> #<unused argument>)
+321: (SB-IMPL::REPL-FUN NIL)
+322: ((LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL))
+323: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL) {9F75CED}>)
+324: (SB-IMPL::TOPLEVEL-REPL NIL)
+325: (SB-IMPL::TOPLEVEL-INIT)
+326: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+327: ((FLET "WITHOUT-INTERRUPTS-BODY-27" :IN SAVE-LISP-AND-DIE))
+328: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {9461061}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT   ] Reduce debugger level (to debug level 9).
+  1: [CONTINUE] Return from SB-UNIX:SIGINT.
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 8).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 7).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Return from SB-UNIX:SIGINT.
+  8:            Reduce debugger level (to debug level 6).
+  9:            Return from SB-UNIX:SIGINT.
+ 10:            Reduce debugger level (to debug level 5).
+ 11:            Return from SB-UNIX:SIGINT.
+ 12:            Reduce debugger level (to debug level 4).
+ 13:            Return from SB-UNIX:SIGINT.
+ 14:            Reduce debugger level (to debug level 3).
+ 15:            Return from SB-UNIX:SIGINT.
+ 16:            Reduce debugger level (to debug level 2).
+ 17:            Return from SB-UNIX:SIGINT.
+ 18:            Reduce debugger level (to debug level 1).
+ 19:            Return from SB-UNIX:SIGINT.
+ 20:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[10] ^CHelp! ERROR-ERROR is 2 levels deep. Will try to reset the IO streams by calling STREAM-COLD-INIT-OR-RESET.
+Help! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {9461061}>
+0: ("bogus stack frame")
+1: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+2: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+3: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+4: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+5: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+6: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+7: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+8: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+9: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+10: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+11: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A60E9}>)
+12: (SB-DEBUG::DEBUG-LOOP-FUN)
+13: (INTERNAL-DEBUG)
+14: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+15: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {ABA47F1}>)
+16: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+17: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {ABA489D}>)
+18: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A495D}>)
+19: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {ABA47F1}>)
+20: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {ABA47F1}>)
+21: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {ABA47F1}>)
+22: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A4A6D}>)
+23: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+24: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+25: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A4DCC))
+26: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+27: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+28: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+29: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A4BA5}>)
+30: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A4D4C) #.(SB-SYS:INT-SAP #XF75A4DCC))
+31: ("foreign function: call_into_lisp")
+32: ("foreign function: funcall3")
+33: ("foreign function: interrupt_handle_now")
+34: ("foreign function: #x805E0E6")
+35: (SB-VM::GENERIC-=)
+36: (SB-FORMAT::A-FORMAT-DIRECTIVE-INTERPRETER #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<~VA> ("] " #<~A> #<~%>) #<unused argument> (#<RESTART CONTINUE {F75A5521}>))
+37: (SB-FORMAT::INTERPRET-DIRECTIVE-LIST #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> (#<~VA> "] " #<~A> #<~%>) (0 8 CONTINUE #<RESTART CONTINUE {F75A5521}>) (8 CONTINUE #<RESTART CONTINUE {F75A5521}>))
+38: (SB-FORMAT::%FORMAT #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> "~& ~2D: [~VA] ~A~%" (0 8 CONTINUE #<RESTART CONTINUE {F75A5521}>) (0 8 CONTINUE #<RESTART CONTINUE {F75A5521}>))
+39: (FORMAT #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> "~& ~2D: [~VA] ~A~%" 0 8 CONTINUE #<RESTART CONTINUE {F75A5521}>)
+40: (FORMAT #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> "~& ~2D: [~VA] ~A~%" 0 8 CONTINUE #<RESTART CONTINUE {F75A5521}>) [more]
+41: (SB-DEBUG::SHOW-RESTARTS (#<RESTART CONTINUE {F75A5521}> #<RESTART ABORT {F75A60E9}> #<RESTART CONTINUE {F75A6321}> #<RESTART ABORT {F75A6EE9}> #<RESTART CONTINUE {F75A7121}> #<RESTART CONTINUE {F75A7CE1}> #<RESTART ABORT {F75A88A9}> #<RESTART CONTINUE {F75A8AE1}> #<RESTART ABORT {F75A96A9}> #<RESTART CONTINUE {F75A98E1}> #<RESTART ABORT {F75AA4A9}> #<RESTART CONTINUE {F75AA6E1}> ...) #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}>)
+42: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+43: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {ABA0ED1}>)
+44: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+45: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {ABA112D}>)
+46: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A549D}>)
+47: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {ABA0ED1}>)
+48: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {ABA0ED1}>)
+49: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {ABA0ED1}>)
+50: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A55AD}>)
+51: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+52: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+53: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A590C))
+54: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+55: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+56: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+57: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A56E5}>)
+58: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A588C) #.(SB-SYS:INT-SAP #XF75A590C))
+59: ("foreign function: call_into_lisp")
+60: ("foreign function: funcall3")
+61: ("foreign function: interrupt_handle_now")
+62: ("foreign function: #x805E0E6")
+63: ("bogus stack frame")
+64: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+65: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+66: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+67: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+68: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+69: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+70: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+71: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+72: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+73: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+74: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A6EE9}>)
+75: (SB-DEBUG::DEBUG-LOOP-FUN)
+76: (INTERNAL-DEBUG)
+77: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+78: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+79: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+80: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB9757D}>)
+81: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A629D}>)
+82: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+83: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+84: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB97341}>)
+85: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A63AD}>)
+86: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+87: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+88: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A670C))
+89: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+90: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+91: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+92: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A64E5}>)
+93: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A668C) #.(SB-SYS:INT-SAP #XF75A670C))
+94: ("foreign function: call_into_lisp")
+95: ("foreign function: funcall3")
+96: ("foreign function: interrupt_handle_now")
+97: ("foreign function: #x805E0E6")
+98: ("bogus stack frame")
+99: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+100: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+101: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+102: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+103: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+104: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+105: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+106: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+107: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+108: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+109: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A88A9}>)
+110: (SB-DEBUG::DEBUG-LOOP-FUN)
+111: (INTERNAL-DEBUG)
+112: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+113: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+114: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+115: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB8E8DD}>)
+116: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A709D}>)
+117: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+118: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+119: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB8E831}>)
+120: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A71AD}>)
+121: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+122: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+123: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A750C))
+124: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+125: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+126: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+127: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A72E5}>)
+128: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A748C) #.(SB-SYS:INT-SAP #XF75A750C))
+129: ("foreign function: call_into_lisp")
+130: ("foreign function: funcall3")
+131: ("foreign function: interrupt_handle_now")
+132: ("foreign function: #x805E0E6")
+133: (SUBSEQ #<unavailable argument> #<unavailable argument> #<unavailable argument>) [external]
+134: (SB-FORMAT::PARSE-CONDITIONAL-DIRECTIVE (" in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>))
+135: (SB-FORMAT::[-FORMAT-DIRECTIVE-INTERPRETER #<SB-PRETTY:PRETTY-STREAM {AB8E751}> #<~@[> (" in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (#<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+136: (SB-FORMAT::INTERPRET-DIRECTIVE-LIST #<SB-PRETTY:PRETTY-STREAM {AB8E751}> (#<~@[> " in thread " #<~_> #<~A> #<~]> ": " #<~2I> #<~_> #<~A>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (#<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+137: (SB-FORMAT::%FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) (SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>))
+138: (FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+139: (FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) [more]
+^C139: (FORMAT #<SB-PRETTY:PRETTY-STREAM {AB8E751}> "debugger invoked on a ~S~@[ in thread ~_~A~]: ~2I~_~A" SB-SYS:INTERACTIVE-INTERRUPT #<SB-THREAD:THREAD "main thread" RUNNING {9461061}> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>) [more]
+#<SB-SYS:INTERACTIVE-INTERRUPT while printing frame 140. The partial output is: "">
+141: (SB-PRETTY::CALL-LOGICAL-BLOCK-PRINTER #<CLOSURE (FLET "PPRINT-BLOCK" :IN SB-DEBUG::%PRINT-DEBUGGER-INVOCATION-REASON) {F75A7B4D}> #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL NIL "" NIL)
+142: (SB-DEBUG::%PRINT-DEBUGGER-INVOCATION-REASON #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}> #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}>)
+143: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+144: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+145: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB8E055}>)
+146: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A7C5D}>)
+147: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+148: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+149: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB8DE49}>)
+150: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A7D6D}>)
+151: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+152: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+153: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A80CC))
+154: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+155: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+156: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+157: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A7EA5}>)
+158: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A804C) #.(SB-SYS:INT-SAP #XF75A80CC))
+159: ("foreign function: call_into_lisp")
+160: ("foreign function: funcall3")
+161: ("foreign function: interrupt_handle_now")
+162: ("foreign function: #x805E0E6")
+163: ("bogus stack frame")
+164: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+165: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+166: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+167: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+168: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+169: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+170: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+171: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+172: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+173: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+174: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75A96A9}>)
+175: (SB-DEBUG::DEBUG-LOOP-FUN)
+176: (INTERNAL-DEBUG)
+177: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+178: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+179: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+180: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB86505}>)
+181: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A8A5D}>)
+182: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+183: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+184: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB86311}>)
+185: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A8B6D}>)
+186: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+187: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+188: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A8ECC))
+189: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+190: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+191: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+192: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A8CA5}>)
+193: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A8E4C) #.(SB-SYS:INT-SAP #XF75A8ECC))
+194: ("foreign function: call_into_lisp")
+195: ("foreign function: funcall3")
+196: ("foreign function: interrupt_handle_now")
+197: ("foreign function: #x805E0E6")
+198: ("bogus stack frame")
+199: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+200: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+201: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+202: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+203: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+204: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+205: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+206: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+207: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+208: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+209: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AA4A9}>)
+210: (SB-DEBUG::DEBUG-LOOP-FUN)
+211: (INTERNAL-DEBUG)
+212: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+213: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+214: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+215: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB7F78D}>)
+216: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A985D}>)
+217: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+218: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+219: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB7F5B1}>)
+220: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A996D}>)
+221: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+222: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+223: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A9CCC))
+224: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+225: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+226: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+227: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A9AA5}>)
+228: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A9C4C) #.(SB-SYS:INT-SAP #XF75A9CCC))
+229: ("foreign function: call_into_lisp")
+230: ("foreign function: funcall3")
+231: ("foreign function: interrupt_handle_now")
+232: ("foreign function: #x805E0E6")
+233: ("bogus stack frame")
+234: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+235: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+236: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+237: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+238: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+239: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+240: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+241: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+242: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+243: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+244: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AB2A9}>)
+245: (SB-DEBUG::DEBUG-LOOP-FUN)
+246: (INTERNAL-DEBUG)
+247: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+248: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+249: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+250: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB796DD}>)
+251: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AA65D}>)
+252: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+253: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+254: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB79519}>)
+255: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AA76D}>)
+256: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+257: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+258: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AAACC))
+259: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+260: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+261: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+262: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AA8A5}>)
+263: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AAA4C) #.(SB-SYS:INT-SAP #XF75AAACC))
+264: ("foreign function: call_into_lisp")
+265: ("foreign function: funcall3")
+266: ("foreign function: interrupt_handle_now")
+267: ("foreign function: #x805E0E6")
+268: ("bogus stack frame")
+269: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+270: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+271: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+272: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+273: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+274: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+275: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+276: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+277: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+278: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+279: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75AC0A9}>)
+280: (SB-DEBUG::DEBUG-LOOP-FUN)
+281: (INTERNAL-DEBUG)
+282: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+283: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+284: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+285: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB746DD}>)
+286: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AB45D}>)
+287: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+288: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+289: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB74531}>)
+290: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AB56D}>)
+291: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+292: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+293: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AB8CC))
+294: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+295: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+296: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+297: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AB6A5}>)
+298: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AB84C) #.(SB-SYS:INT-SAP #XF75AB8CC))
+299: ("foreign function: call_into_lisp")
+300: ("foreign function: funcall3")
+301: ("foreign function: interrupt_handle_now")
+302: ("foreign function: #x805E0E6")
+303: ("bogus stack frame")
+304: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+305: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+306: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+307: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+308: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+309: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+310: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+311: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+312: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+313: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+314: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75ACEA9}>)
+315: (SB-DEBUG::DEBUG-LOOP-FUN)
+316: (INTERNAL-DEBUG)
+317: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+318: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+319: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+320: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB705A5}>)
+321: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AC25D}>)
+322: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+323: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+324: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB70411}>)
+325: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AC36D}>)
+326: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+327: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+328: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AC6CC))
+329: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+330: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+331: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+332: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AC4A5}>)
+333: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AC64C) #.(SB-SYS:INT-SAP #XF75AC6CC))
+334: ("foreign function: call_into_lisp")
+335: ("foreign function: funcall3")
+336: ("foreign function: interrupt_handle_now")
+337: ("foreign function: #x805E0E6")
+338: ("bogus stack frame")
+339: (SB-SYS:WAIT-UNTIL-FD-USABLE 3 :INPUT NIL T)
+340: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}>)
+341: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+342: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0)
+343: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {A8510B9}> NIL 0 #<unused argument>)
+344: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {91108D9}> NIL 0 #<unused argument>)
+345: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL 0 #<unused argument>)
+346: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) T)
+347: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+348: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> NIL (NIL) NIL)
+349: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {910F349}> #<RESTART ABORT {F75ADCA1}>)
+350: (SB-DEBUG::DEBUG-LOOP-FUN)
+351: (INTERNAL-DEBUG)
+352: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+353: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+354: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+355: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AB6CE75}>)
+356: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AD05D}>)
+357: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+358: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+359: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AB6CCF9}>)
+360: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AD16D}>)
+361: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+362: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+363: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AD4CC))
+364: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+365: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+366: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+367: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AD2A5}>)
+368: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AD44C) #.(SB-SYS:INT-SAP #XF75AD4CC))
+369: ("foreign function: call_into_lisp")
+370: ("foreign function: funcall3")
+371: ("foreign function: interrupt_handle_now")
+372: ("foreign function: #x805E0E6")
+373: ("bogus stack frame")
+374: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL T)
+375: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "standard input" {A8511E9}>)
+376: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0)
+377: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0)
+378: (READ-CHAR #<SB-SYS:FD-STREAM for "standard input" {A8511E9}> NIL 0 #<unused argument>)
+379: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL 0 #<unused argument>)
+380: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) T)
+381: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) NIL)
+382: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> NIL (NIL) NIL)
+383: (SB-IMPL::REPL-READ-FORM-FUN #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {91051F1}> #<unused argument>)
+384: (SB-IMPL::REPL-FUN NIL)
+385: ((LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL))
+386: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL) {9F75CED}>)
+387: (SB-IMPL::TOPLEVEL-REPL NIL)
+388: (SB-IMPL::TOPLEVEL-INIT)
+389: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+390: ((FLET "WITHOUT-INTERRUPTS-BODY-27" :IN SAVE-LISP-AND-DIE))
+391: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {9461061}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT   ] Reduce debugger level (to debug level 10).
+  1:            Reduce debugger level (to debug level 9).
+  2: [CONTINUE] Return from SB-UNIX:SIGINT.
+  3:            Return from SB-UNIX:SIGINT.
+  4:            Reduce debugger level (to debug level 8).
+  5:            Return from SB-UNIX:SIGINT.
+  6:            Reduce debugger level (to debug level 7).
+  7:            Return from SB-UNIX:SIGINT.
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 6).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 5).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 4).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Reduce debugger level (to debug level 3).
+ 16:            Return from SB-UNIX:SIGINT.
+ 17:            Reduce debugger level (to debug level 2).
+ 18:            Return from SB-UNIX:SIGINT.
+ 19:            Reduce debugger level (to debug level 1).
+ 20:            Return from SB-UNIX:SIGINT.
+ 21:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[11] ^CHelp! ERROR-ERROR is 3 levels deep. Will try to THROW this thread to the toplevel.
+* ^C
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Exit debugger, returning to top level.
+
+("bogus stack frame")
+0] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 1).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[2] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 2).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 1).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[3] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 3).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 2).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 1).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[4] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 4).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 3).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 2).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 1).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[5] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 5).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 4).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 3).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 2).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 1).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[6] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 6).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 5).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 4).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 3).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 2).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 1).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[7] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 7).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 6).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 5).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 4).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 3).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 2).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 1).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[8] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 8).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 7).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 6).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 5).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 4).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 3).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 2).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Reduce debugger level (to debug level 1).
+ 16:            Return from SB-UNIX:SIGINT.
+ 17:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[9] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 9).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 8).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 7).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 6).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 5).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 4).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 3).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Reduce debugger level (to debug level 2).
+ 16:            Return from SB-UNIX:SIGINT.
+ 17:            Reduce debugger level (to debug level 1).
+ 18:            Return from SB-UNIX:SIGINT.
+ 19:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[10] ^C
+
+debugger invoked on a SB-SYS:INTERACTIVE-INTERRUPT in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  Interactive interrupt at #xF7FCF579.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+^C  0: [CONTINUE] Return from Help! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {9461061}>
+0: ("bogus stack frame")
+1: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+2: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+3: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+4: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+5: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+6: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+7: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+8: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+9: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+10: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+11: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A6CA9}>)
+12: (SB-DEBUG::DEBUG-LOOP-FUN)
+13: (INTERNAL-DEBUG)
+14: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+15: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+16: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+17: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AF0D5B5}>)
+18: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A605D}>)
+19: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+20: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+21: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+22: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A616D}>)
+23: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+24: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+25: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A64CC))
+26: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+27: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+28: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+29: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A62A5}>)
+30: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A644C) #.(SB-SYS:INT-SAP #XF75A64CC))
+31: ("foreign function: call_into_lisp")
+32: ("foreign function: funcall3")
+33: ("foreign function: interrupt_handle_now")
+34: ("foreign function: #x805E0E6")
+35: ("bogus stack frame")
+36: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+37: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+38: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+39: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+40: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+41: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+42: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+43: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+44: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+45: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+46: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A7AA9}>)
+47: (SB-DEBUG::DEBUG-LOOP-FUN)
+48: (INTERNAL-DEBUG)
+49: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+50: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+51: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+52: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AF0395D}>)
+53: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A6E5D}>)
+54: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+55: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+56: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+57: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A6F6D}>)
+58: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+59: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+60: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A72CC))
+61: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+62: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+63: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+64: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A70A5}>)
+65: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A724C) #.(SB-SYS:INT-SAP #XF75A72CC))
+66: ("foreign function: call_into_lisp")
+67: ("foreign function: funcall3")
+68: ("foreign function: interrupt_handle_now")
+69: ("foreign function: #x805E0E6")
+70: ("bogus stack frame")
+71: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+72: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+73: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+74: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+75: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+76: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+77: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+78: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+79: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+80: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+81: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A88A9}>)
+82: (SB-DEBUG::DEBUG-LOOP-FUN)
+83: (INTERNAL-DEBUG)
+84: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+85: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+86: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+87: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEFB055}>)
+88: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A7C5D}>)
+89: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+90: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+91: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+92: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A7D6D}>)
+93: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+94: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+95: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A80CC))
+96: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+97: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+98: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+99: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A7EA5}>)
+100: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A804C) #.(SB-SYS:INT-SAP #XF75A80CC))
+101: ("foreign function: call_into_lisp")
+102: ("foreign function: funcall3")
+103: ("foreign function: interrupt_handle_now")
+104: ("foreign function: #x805E0E6")
+105: ("bogus stack frame")
+106: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+107: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+108: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+109: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+110: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+111: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+112: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+113: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+114: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+115: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+116: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A96A9}>)
+117: (SB-DEBUG::DEBUG-LOOP-FUN)
+118: (INTERNAL-DEBUG)
+119: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+120: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+121: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+122: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEF3505}>)
+123: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A8A5D}>)
+124: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+125: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+126: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+127: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A8B6D}>)
+128: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+129: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+130: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A8ECC))
+131: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+132: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+133: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+134: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A8CA5}>)
+135: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A8E4C) #.(SB-SYS:INT-SAP #XF75A8ECC))
+136: ("foreign function: call_into_lisp")
+137: ("foreign function: funcall3")
+138: ("foreign function: interrupt_handle_now")
+139: ("foreign function: #x805E0E6")
+140: ("bogus stack frame")
+141: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+142: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+143: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+144: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+145: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+146: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+147: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+148: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+149: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+150: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+151: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AA4A9}>)
+152: (SB-DEBUG::DEBUG-LOOP-FUN)
+153: (INTERNAL-DEBUG)
+154: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+155: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+156: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+157: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEEC4ED}>)
+158: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A985D}>)
+159: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+160: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+161: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+162: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A996D}>)
+163: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+164: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+165: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A9CCC))
+166: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+167: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+168: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+169: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A9AA5}>)
+170: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A9C4C) #.(SB-SYS:INT-SAP #XF75A9CCC))
+171: ("foreign function: call_into_lisp")
+172: ("foreign function: funcall3")
+173: ("foreign function: interrupt_handle_now")
+174: ("foreign function: #x805E0E6")
+175: ("bogus stack frame")
+176: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+177: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+178: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+179: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+180: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+181: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+182: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+183: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+184: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+185: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+186: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AB2A9}>)
+187: (SB-DEBUG::DEBUG-LOOP-FUN)
+188: (INTERNAL-DEBUG)
+189: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+190: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+191: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+192: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEE629D}>)
+193: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AA65D}>)
+194: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+195: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+196: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+197: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AA76D}>)
+198: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+199: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+200: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AAACC))
+201: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+202: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+203: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+204: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AA8A5}>)
+205: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AAA4C) #.(SB-SYS:INT-SAP #XF75AAACC))
+206: ("foreign function: call_into_lisp")
+207: ("foreign function: funcall3")
+208: ("foreign function: interrupt_handle_now")
+209: ("foreign function: #x805E0E6")
+210: ("bogus stack frame")
+211: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+212: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+213: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+214: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+215: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+216: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+217: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+218: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+219: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+220: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+221: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AC0A9}>)
+222: (SB-DEBUG::DEBUG-LOOP-FUN)
+223: (INTERNAL-DEBUG)
+224: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+225: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+226: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+227: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEE11FD}>)
+228: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AB45D}>)
+229: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+230: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+231: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+232: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AB56D}>)
+233: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+234: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+235: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AB8CC))
+236: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+237: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+238: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+239: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AB6A5}>)
+240: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AB84C) #.(SB-SYS:INT-SAP #XF75AB8CC))
+241: ("foreign function: call_into_lisp")
+242: ("foreign function: funcall3")
+243: ("foreign function: interrupt_handle_now")
+244: ("foreign function: #x805E0E6")
+245: ("bogus stack frame")
+246: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+247: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+248: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+249: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+250: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+251: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+252: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+253: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+254: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+255: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+256: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75ACEA9}>)
+257: (SB-DEBUG::DEBUG-LOOP-FUN)
+258: (INTERNAL-DEBUG)
+259: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+260: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+261: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+262: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEDCD1D}>)
+263: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AC25D}>)
+264: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+265: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+266: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+267: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AC36D}>)
+268: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+269: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+270: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AC6CC))
+271: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+272: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+273: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+274: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AC4A5}>)
+275: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AC64C) #.(SB-SYS:INT-SAP #XF75AC6CC))
+276: ("foreign function: call_into_lisp")
+277: ("foreign function: funcall3")
+278: ("foreign function: interrupt_handle_now")
+279: ("foreign function: #x805E0E6")
+280: ("bogus stack frame")
+281: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+282: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+283: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+284: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+285: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+286: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+287: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+288: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+289: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+290: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+291: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75ADCA1}>)
+292: (SB-DEBUG::DEBUG-LOOP-FUN)
+293: (INTERNAL-DEBUG)
+294: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+295: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+296: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+297: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AED9855}>)
+298: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AD05D}>)
+299: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+300: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+301: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+302: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AD16D}>)
+303: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+304: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+305: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AD4CC))
+306: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+307: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+308: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+309: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AD2A5}>)
+310: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AD44C) #.(SB-SYS:INT-SAP #XF75AD4CC))
+311: ("foreign function: call_into_lisp")
+312: ("foreign function: funcall3")
+313: ("foreign function: interrupt_handle_now")
+314: ("foreign function: #x805E0E6")
+315: ("bogus stack frame")
+316: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL T)
+317: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "standard input" {AD20A91}>)
+318: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0)
+319: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0)
+320: (READ-CHAR #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0 #<unused argument>)
+321: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL 0 #<unused argument>)
+322: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) T)
+323: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) NIL)
+324: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) NIL)
+325: (SB-IMPL::REPL-READ-FORM-FUN #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> #<unused argument>)
+326: (SB-IMPL::REPL-FUN NIL)
+327: ((LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL))
+328: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL) {9F75CED}>)
+329: (SB-IMPL::TOPLEVEL-REPL NIL)
+330: (SB-IMPL::TOPLEVEL-INIT)
+331: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+332: ((FLET "WITHOUT-INTERRUPTS-BODY-27" :IN SAVE-LISP-AND-DIE))
+333: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {9461061}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [CONTINUE] Return from SB-UNIX:SIGINT.
+  1: [ABORT   ] Reduce debugger level (to debug level 10).
+  2:            Return from SB-UNIX:SIGINT.
+  3:            Reduce debugger level (to debug level 9).
+  4:            Return from SB-UNIX:SIGINT.
+  5:            Reduce debugger level (to debug level 8).
+  6:            Return from SB-UNIX:SIGINT.
+  7:            Reduce debugger level (to debug level 7).
+  8:            Return from SB-UNIX:SIGINT.
+  9:            Reduce debugger level (to debug level 6).
+ 10:            Return from SB-UNIX:SIGINT.
+ 11:            Reduce debugger level (to debug level 5).
+ 12:            Return from SB-UNIX:SIGINT.
+ 13:            Reduce debugger level (to debug level 4).
+ 14:            Return from SB-UNIX:SIGINT.
+ 15:            Reduce debugger level (to debug level 3).
+ 16:            Return from SB-UNIX:SIGINT.
+ 17:            Reduce debugger level (to debug level 2).
+ 18:            Return from SB-UNIX:SIGINT.
+ 19:            Reduce debugger level (to debug level 1).
+ 20:            Return from SB-UNIX:SIGINT.
+ 21:            Exit debugger, returning to top level.
+
+("bogus stack frame")
+0[11] ^CHelp! ERROR-ERROR is 2 levels deep. Will try to reset the IO streams by calling STREAM-COLD-INIT-OR-RESET.
+Help! 11 nested errors. SB-KERNEL:*MAXIMUM-ERROR-DEPTH* exceeded.
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {9461061}>
+0: ("bogus stack frame")
+1: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+2: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+3: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+4: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+5: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+6: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+7: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+8: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+9: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+10: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+11: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A5EA9}>)
+12: (SB-DEBUG::DEBUG-LOOP-FUN)
+13: (INTERNAL-DEBUG)
+14: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+15: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF17AC1}>)
+16: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+17: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AF17D15}>)
+18: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A525D}>)
+19: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AF17AC1}>)
+20: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF17AC1}>)
+21: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AF17AC1}>)
+22: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A536D}>)
+23: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+24: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+25: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A56CC))
+26: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+27: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+28: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+29: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A54A5}>)
+30: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A564C) #.(SB-SYS:INT-SAP #XF75A56CC))
+31: ("foreign function: call_into_lisp")
+32: ("foreign function: funcall3")
+33: ("foreign function: interrupt_handle_now")
+34: ("foreign function: #x805E0E6")
+35: ("bogus stack frame")
+36: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+37: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+38: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+39: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+40: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+41: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+42: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+43: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+44: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+45: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+46: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A6CA9}>)
+47: (SB-DEBUG::DEBUG-LOOP-FUN)
+48: (INTERNAL-DEBUG)
+49: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+50: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+51: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+52: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AF0D5B5}>)
+53: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A605D}>)
+54: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+55: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+56: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AF0D379}>)
+57: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A616D}>)
+58: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+59: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+60: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A64CC))
+61: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+62: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+63: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+64: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A62A5}>)
+65: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A644C) #.(SB-SYS:INT-SAP #XF75A64CC))
+66: ("foreign function: call_into_lisp")
+67: ("foreign function: funcall3")
+68: ("foreign function: interrupt_handle_now")
+69: ("foreign function: #x805E0E6")
+70: ("bogus stack frame")
+71: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+72: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+73: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+74: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+75: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+76: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+77: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+78: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+79: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+80: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+81: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A7AA9}>)
+82: (SB-DEBUG::DEBUG-LOOP-FUN)
+83: (INTERNAL-DEBUG)
+84: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+85: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+86: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+87: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AF0395D}>)
+88: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A6E5D}>)
+89: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+90: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+91: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AF03739}>)
+92: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A6F6D}>)
+93: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+94: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+95: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A72CC))
+96: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+97: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+98: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+99: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A70A5}>)
+100: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A724C) #.(SB-SYS:INT-SAP #XF75A72CC))
+101: ("foreign function: call_into_lisp")
+102: ("foreign function: funcall3")
+103: ("foreign function: interrupt_handle_now")
+104: ("foreign function: #x805E0E6")
+105: ("bogus stack frame")
+106: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+107: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+108: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+109: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+110: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+111: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+112: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+113: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+114: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+115: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+116: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A88A9}>)
+117: (SB-DEBUG::DEBUG-LOOP-FUN)
+118: (INTERNAL-DEBUG)
+119: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+120: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+121: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+122: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEFB055}>)
+123: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A7C5D}>)
+124: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+125: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+126: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEFAE49}>)
+127: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A7D6D}>)
+128: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+129: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+130: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A80CC))
+131: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+132: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+133: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+134: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A7EA5}>)
+135: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A804C) #.(SB-SYS:INT-SAP #XF75A80CC))
+136: ("foreign function: call_into_lisp")
+137: ("foreign function: funcall3")
+138: ("foreign function: interrupt_handle_now")
+139: ("foreign function: #x805E0E6")
+140: ("bogus stack frame")
+141: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+142: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+143: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+144: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+145: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+146: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+147: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+148: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+149: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+150: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+151: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75A96A9}>)
+152: (SB-DEBUG::DEBUG-LOOP-FUN)
+153: (INTERNAL-DEBUG)
+154: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+155: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+156: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+157: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEF3505}>)
+158: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A8A5D}>)
+159: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+160: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+161: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEF3311}>)
+162: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A8B6D}>)
+163: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+164: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+165: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A8ECC))
+166: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+167: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+168: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+169: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A8CA5}>)
+170: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A8E4C) #.(SB-SYS:INT-SAP #XF75A8ECC))
+171: ("foreign function: call_into_lisp")
+172: ("foreign function: funcall3")
+173: ("foreign function: interrupt_handle_now")
+174: ("foreign function: #x805E0E6")
+175: ("bogus stack frame")
+176: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+177: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+178: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+179: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+180: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+181: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+182: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+183: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+184: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+185: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+186: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AA4A9}>)
+187: (SB-DEBUG::DEBUG-LOOP-FUN)
+188: (INTERNAL-DEBUG)
+189: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+190: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+191: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+192: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEEC4ED}>)
+193: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75A985D}>)
+194: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+195: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+196: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEEC311}>)
+197: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75A996D}>)
+198: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+199: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+200: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75A9CCC))
+201: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+202: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+203: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+204: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75A9AA5}>)
+205: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75A9C4C) #.(SB-SYS:INT-SAP #XF75A9CCC))
+206: ("foreign function: call_into_lisp")
+207: ("foreign function: funcall3")
+208: ("foreign function: interrupt_handle_now")
+209: ("foreign function: #x805E0E6")
+210: ("bogus stack frame")
+211: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+212: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+213: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+214: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+215: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+216: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+217: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+218: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+219: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+220: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+221: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AB2A9}>)
+222: (SB-DEBUG::DEBUG-LOOP-FUN)
+223: (INTERNAL-DEBUG)
+224: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+225: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+226: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+227: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEE629D}>)
+228: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AA65D}>)
+229: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+230: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+231: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEE60D9}>)
+232: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AA76D}>)
+233: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+234: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+235: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AAACC))
+236: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+237: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+238: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+239: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AA8A5}>)
+240: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AAA4C) #.(SB-SYS:INT-SAP #XF75AAACC))
+241: ("foreign function: call_into_lisp")
+242: ("foreign function: funcall3")
+243: ("foreign function: interrupt_handle_now")
+244: ("foreign function: #x805E0E6")
+245: ("bogus stack frame")
+246: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+247: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+248: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+249: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+250: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+251: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+252: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+253: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+254: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+255: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+256: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75AC0A9}>)
+257: (SB-DEBUG::DEBUG-LOOP-FUN)
+258: (INTERNAL-DEBUG)
+259: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+260: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+261: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+262: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEE11FD}>)
+263: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AB45D}>)
+264: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+265: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+266: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEE1051}>)
+267: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AB56D}>)
+268: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+269: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+270: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AB8CC))
+271: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+272: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+273: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+274: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AB6A5}>)
+275: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AB84C) #.(SB-SYS:INT-SAP #XF75AB8CC))
+276: ("foreign function: call_into_lisp")
+277: ("foreign function: funcall3")
+278: ("foreign function: interrupt_handle_now")
+279: ("foreign function: #x805E0E6")
+280: ("bogus stack frame")
+281: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+282: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+283: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+284: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+285: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+286: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+287: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+288: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+289: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+290: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+291: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75ACEA9}>)
+292: (SB-DEBUG::DEBUG-LOOP-FUN)
+293: (INTERNAL-DEBUG)
+294: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+295: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+296: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+297: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AEDCD1D}>)
+298: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AC25D}>)
+299: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+300: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+301: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AEDCB89}>)
+302: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AC36D}>)
+303: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+304: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+305: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AC6CC))
+306: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+307: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+308: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+309: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AC4A5}>)
+310: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AC64C) #.(SB-SYS:INT-SAP #XF75AC6CC))
+311: ("foreign function: call_into_lisp")
+312: ("foreign function: funcall3")
+313: ("foreign function: interrupt_handle_now")
+314: ("foreign function: #x805E0E6")
+315: ("bogus stack frame")
+316: (SB-SYS:WAIT-UNTIL-FD-USABLE 4 :INPUT NIL T)
+317: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}>)
+318: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+319: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0)
+320: (READ-CHAR #<SB-SYS:FD-STREAM for "the terminal" {AD211C1}> NIL 0 #<unused argument>)
+321: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*TTY* {AD215C9}> NIL 0 #<unused argument>)
+322: (READ-CHAR #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL 0 #<unused argument>)
+323: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) T)
+324: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+325: (READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> NIL (NIL) NIL)
+326: (SB-DEBUG::DEBUG-READ #<SYNONYM-STREAM :SYMBOL *TERMINAL-IO* {AD216A9}> #<RESTART ABORT {F75ADCA1}>)
+327: (SB-DEBUG::DEBUG-LOOP-FUN)
+328: (INTERNAL-DEBUG)
+329: ((FLET DEBUG :IN SB-DEBUG::%INVOKE-DEBUGGER))
+330: (SB-DEBUG::%INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+331: ((LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX))
+332: (SB-IMPL::CALL-WITH-SANE-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {AED9855}>)
+333: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX) {F75AD05D}>)
+334: (SB-DEBUG::FUNCALL-WITH-DEBUG-IO-SYNTAX #<FUNCTION SB-DEBUG::%INVOKE-DEBUGGER> #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+335: (INVOKE-DEBUGGER #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+336: (SB-INT:%BREAK SB-UNIX:SIGINT #<SB-SYS:INTERACTIVE-INTERRUPT {AED96D9}>)
+337: (SB-UNIX::WITH-DEFERRABLE-SIGNALS-UNBLOCKED T #<CLOSURE (FLET SB-UNIX::BODY :IN SB-UNIX::SIGINT-HANDLER) {F75AD16D}>)
+338: ((FLET SB-UNIX::INTERRUPT-IT :IN SB-UNIX::SIGINT-HANDLER))
+339: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-THREAD:INTERRUPT-THREAD))
+340: (SB-UNIX::SIGPIPE-HANDLER #<unused argument> #<unused argument> #.(SB-SYS:INT-SAP #XF75AD4CC))
+341: ((FLET "WITHOUT-INTERRUPTS-BODY-8" :IN SB-SYS:INVOKE-INTERRUPTION))
+342: ((FLET SB-THREAD::EXEC :IN SB-SYS:INVOKE-INTERRUPTION))
+343: ((FLET "WITHOUT-INTERRUPTS-BODY-1" :IN SB-SYS:INVOKE-INTERRUPTION))
+344: (SB-SYS:INVOKE-INTERRUPTION #<CLOSURE (FLET SB-UNIX::INTERRUPTION :IN SB-SYS:ENABLE-INTERRUPT) {F75AD2A5}>)
+345: ((FLET SB-UNIX::RUN-HANDLER :IN SB-SYS:ENABLE-INTERRUPT) 13 #.(SB-SYS:INT-SAP #XF75AD44C) #.(SB-SYS:INT-SAP #XF75AD4CC))
+346: ("foreign function: call_into_lisp")
+347: ("foreign function: funcall3")
+348: ("foreign function: interrupt_handle_now")
+349: ("foreign function: #x805E0E6")
+350: ("bogus stack frame")
+351: (SB-SYS:WAIT-UNTIL-FD-USABLE 0 :INPUT NIL T)
+352: (SB-IMPL::REFILL-INPUT-BUFFER #<SB-SYS:FD-STREAM for "standard input" {AD20A91}>)
+353: (SB-IMPL::INPUT-CHAR/UTF-8 #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0)
+354: ((LAMBDA (&REST REST) :IN SB-IMPL::GET-EXTERNAL-FORMAT) #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0)
+355: (READ-CHAR #<SB-SYS:FD-STREAM for "standard input" {AD20A91}> NIL 0 #<unused argument>)
+356: (READ-CHAR #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL 0 #<unused argument>)
+357: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) T)
+358: (SB-IMPL::%READ-PRESERVING-WHITESPACE #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) NIL)
+359: (READ #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> NIL (NIL) NIL)
+360: (SB-IMPL::REPL-READ-FORM-FUN #<SYNONYM-STREAM :SYMBOL SB-SYS:*STDIN* {AD21639}> #<unused argument>)
+361: (SB-IMPL::REPL-FUN NIL)
+362: ((LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL))
+363: (SB-IMPL::%WITH-REBOUND-IO-SYNTAX #<CLOSURE (LAMBDA NIL :IN SB-IMPL::TOPLEVEL-REPL) {9F75CED}>)
+364: (SB-IMPL::TOPLEVEL-REPL NIL)
+365: (SB-IMPL::TOPLEVEL-INIT)
+366: ((FLET SB-UNIX::BODY :IN SAVE-LISP-AND-DIE))
+367: ((FLET "WITHOUT-INTERRUPTS-BODY-27" :IN SAVE-LISP-AND-DIE))
+368: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+debugger invoked on a SIMPLE-ERROR in thread #<THREAD "main thread" RUNNING {9461061}>: Maximum error nesting depth exceeded
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT   ] Reduce debugger level (to debug level 11).
+  1: [CONTINUE] Return from SB-UNIX:SIGINT.
+  2:            Reduce debugger level (to debug level 10).
+  3:            Return from SB-UNIX:SIGINT.
+  4:            Reduce debugger level (to debug level 9).
+  5:            Return from SB-UNIX:SIGINT.
+  6:            Reduce debugger level (to debug level 8).
+  7:            Return from SB-UNIX:SIGINT.
+  8:            Reduce d
